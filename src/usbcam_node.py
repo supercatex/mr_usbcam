@@ -30,6 +30,8 @@ if __name__ == "__main__":
         success, frame = cap.read()
         if not success: break
 
+        pub_camera.publish(CvBridge().cv2_to_imgmsg(frame, "bgr8"))
+
         if display:
             cv2.imshow("mr_usbcam", frame)
             key_code = cv2.waitKey(1)
