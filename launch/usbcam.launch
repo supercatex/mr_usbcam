@@ -3,7 +3,7 @@
     <arg name="camera" default="/camera/rgb/image_raw" />
     <arg name="display" default="true" />
 
-    <node pkg="mr_usbcam" type="usbcam_node.py" name="usbcam" output="screen">
+    <node pkg="mr_usbcam" type="usbcam_node.py" name="usbcam" output="screen" required="true">
         <param name="usb_port" type="string" value="$(arg usb_port)" />
         <param name="camera" type="string" value="$(arg camera)" />
         <param name="display" type="boolean" value="$(arg display)" />
